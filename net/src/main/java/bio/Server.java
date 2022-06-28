@@ -1,0 +1,59 @@
+package bio;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+
+
+    public static void main(String[] args) throws IOException {
+        //服务端启动必备
+        ServerSocket serverSocket = new ServerSocket();
+        //表示服务器在哪个端口上监听
+        serverSocket.bind(new InetSocketAddress(10001));
+        System.out.println("start server");
+        try {
+            while (true) {
+                new Thread(new ServerTask(serverSocket.accept())).start();
+            }
+        } finally {
+            serverSocket.close();
+        }
+
+    }
+
+    private static class ServerTask implements Runnable {
+
+        protected Socket socket = null;
+
+        public ServerTask(Socket socket) {
+            this.socket = socket;
+        }
+
+        @Override
+        public void run() {
+            try (ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
+                 ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream())
+            ) {
+                //接受客户端的输出，也就是服务器的输入
+                String userName = inputStream.readUTF();
+                System.out.println("Accept client message:" + userName);
+                //接受服务器的输出，也就是客户端的输入
+                outputStream.writeUTF("Hello," + userName);
+                outputStream.flush();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }finally {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}

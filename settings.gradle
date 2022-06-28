@@ -1,2 +1,3 @@
 rootProject.name = 'ori_java'
+include 'net'
 
