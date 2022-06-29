@@ -109,7 +109,7 @@ public class NioServerHandleWriteable implements Runnable {
                 if (att.hasRemaining()) {
                     int count = socketChannel.write(att);
                     System.out.println("write:" + count + "byte");
-                }else {
+                } else {
                     //如果发送buffer里没有数据，就得取消对OP_WRITE的监听
                     selectionKey.interestOps(SelectionKey.OP_READ);
                 }
@@ -125,5 +125,9 @@ public class NioServerHandleWriteable implements Runnable {
         //由于先写入了数据，要读取buffer数据到sc中的话，得先切换到读模式
         writeBuffer.flip();
         socketChannel.register(selector, SelectionKey.OP_WRITE | SelectionKey.OP_READ, writeBuffer);
+    }
+
+    public void stop() {
+        started = false;
     }
 }
