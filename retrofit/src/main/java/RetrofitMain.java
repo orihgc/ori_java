@@ -25,12 +25,12 @@ public class RetrofitMain {
         objectCall.enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, Response<Object> response) {
-                System.out.println();
+                System.out.println("success");
             }
 
             @Override
             public void onFailure(Call<Object> call, Throwable t) {
-                System.out.println();
+                System.out.println("failed");
             }
         });
 
