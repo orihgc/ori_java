@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee3d4acf-bddc-4f86-8bc4-9c28d5ad7e7a" name="变更" comment="feature: ignore">
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="ee3d4acf-bddc-4f86-8bc4-9c28d5ad7e7a" name="变更" comment="feature: thread init">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ThreadMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/CustomTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/policy/CustomQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/policy/CustomThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/policy/CustomThreadPoolMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/policy/PolicyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/pool/CustomQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/pool/CustomThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/pool/CustomThreadPoolMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/poolv2/CustomQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/poolv2/CustomThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/custom/poolv2/CustomThreadPoolMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +29,14 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,14 +60,36 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "/Users/orihgc/IdeaProjects/ori_java/thread/src/main/java/custom/policy",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="应用程序.OkHttpMain">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/thread/src/main/java/custom/policy" />
+      <recent name="$PROJECT_DIR$/thread/src/main/java/custom/poolv2" />
+      <recent name="$PROJECT_DIR$/thread/src/main/java/custom/pool" />
+      <recent name="$PROJECT_DIR$/thread/src/main/java/demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.custom.poolv2.CustomThreadPoolMain">
+    <configuration name="CustomThreadPoolMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pool.CustomThreadPoolMain" />
+      <module name="ori_java.thread.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OkHttpMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OkHttpMain" />
       <module name="ori_java.okhttp.main" />
@@ -61,12 +104,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="custom.pool.CustomThreadPoolMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="custom.pool.CustomThreadPoolMain" />
+      <module name="ori_java.thread.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="custom.pool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="custom.poolv2.CustomThreadPoolMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="custom.poolv2.CustomThreadPoolMain" />
+      <module name="ori_java.thread.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="custom.poolv2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="应用程序.custom.pool.CustomThreadPoolMain" />
+      <item itemvalue="应用程序.custom.poolv2.CustomThreadPoolMain" />
+      <item itemvalue="应用程序.CustomThreadPoolMain" />
       <item itemvalue="应用程序.OkHttpMain" />
       <item itemvalue="应用程序.RetrofitMain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.custom.poolv2.CustomThreadPoolMain" />
+        <item itemvalue="应用程序.custom.pool.CustomThreadPoolMain" />
+        <item itemvalue="应用程序.CustomThreadPoolMain" />
         <item itemvalue="应用程序.OkHttpMain" />
         <item itemvalue="应用程序.RetrofitMain" />
       </list>
@@ -89,9 +164,20 @@
       <updated>1658032703310</updated>
       <workItem from="1658032704620" duration="10000" />
       <workItem from="1658032723837" duration="1127000" />
-      <workItem from="1658382884711" duration="137000" />
+      <workItem from="1658382884711" duration="492000" />
+      <workItem from="1658469765667" duration="963000" />
+      <workItem from="1658563429186" duration="4254000" />
+      <workItem from="1658568177454" duration="133000" />
+      <workItem from="1658568350130" duration="6463000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feature: thread init">
+      <created>1658383099586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658383099586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +196,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature: ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: ignore" />
+    <MESSAGE value="feature: thread init" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: thread init" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/thread/src/main/java/custom/pool/CustomThreadPool.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
